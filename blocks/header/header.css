@@ -1,0 +1,11 @@
+.header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 880px;
+    display: flex;
+    flex-direction: column;
+    gap: calc(32px + (41 - 32) * ((100vw - 320px) / (1280 - 320)));
+    padding-top: calc(28px + (45 - 28) * ((100vw - 320px) / (1280 - 320)));
+}

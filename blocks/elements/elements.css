@@ -1,0 +1,17 @@
+.elements {
+    margin: 0;
+    padding-top: calc(36px + (51 - 36) * ((100vw - 320px) / (1280 - 320)));
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 880px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+    gap: 20px 17px;
+}
+
+@media only screen and (max-width: 900px) {
+    .elements {
+        padding-left: 19px;
+        padding-right: 19px;
+    }
+}

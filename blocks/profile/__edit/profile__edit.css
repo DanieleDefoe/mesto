@@ -1,0 +1,24 @@
+.profile__edit {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 1px solid #fff;
+    grid-area: edit;
+    width: 24px;
+    height: 24px;
+    align-self: center;
+    margin-left: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile__edit:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+    .profile__edit {
+        margin-left: 10px;
+    }
+}

@@ -1,6 +1,8 @@
 .card__button {
     border: none;
-    background: none;
+    background: url(../../../images/like.svg) no-repeat;
+    background-position: center;
+    background-size: 22px 19px;
     margin: 0;
     padding: 0;
     width: 22px;

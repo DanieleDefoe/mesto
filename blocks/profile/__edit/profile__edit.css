@@ -1,7 +1,9 @@
 .profile__edit {
     margin: 0;
     padding: 0;
-    background: none;
+    background: url(../../../images/edit.svg) no-repeat;
+    background-size: 10px 10px;
+    background-position: center;
     border: 1px solid #fff;
     grid-area: edit;
     width: 24px;

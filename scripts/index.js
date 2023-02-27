@@ -13,6 +13,8 @@ const statusField = document.getElementById('description');
 
 const showPopup = () => {
     popup.classList.add('popup_opened');
+    nameField.value = profileName.textContent;
+    statusField.value = profileStatus.textContent;
 };
 
 const hidePopup = () => {
@@ -20,19 +22,13 @@ const hidePopup = () => {
 };
 
 const fillColor = (e) => {
-    if (e.target.src.includes('like-active')) {
-        e.target.src = './images/like.svg';
-    } else {
-        e.target.src = './images/like-active.svg';
-    }
+    e.target.classList.toggle('card__button_active');
 };
 
 const updateText = (e) => {
     e.preventDefault();
     profileName.textContent = nameField.value;
     profileStatus.textContent = statusField.value;
-    nameField.value = '';
-    statusField.value = '';
     hidePopup();
 };
 

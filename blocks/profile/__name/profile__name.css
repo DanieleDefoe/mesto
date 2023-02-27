@@ -11,6 +11,8 @@
 
 @media only screen and (max-width: 767px) {
     .profile__name {
+        align-self: unset;
+        margin: 0 0 14px 0;
         font-size: 27px;
         line-height: 33px;
     }

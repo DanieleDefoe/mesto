@@ -3,11 +3,17 @@
     padding: 0;
     object-fit: contain;
     object-position: center;
-    width: calc(104px + (142 - 104) * ((100vw - 320px) / (1280 - 320)));
+    width: 142px;
 }
 
 @media only screen and (max-width: 900px) {
     .header__logo {
         margin-left: 27px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .header__logo {
+        width: 104px;
     }
 }

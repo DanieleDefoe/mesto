@@ -1,7 +1,7 @@
 .popup__container {
     width: calc(282px + (430 - 282) * ((100vw - 320px) / (1280 - 320)));
     max-width: 430px;
-    min-height: 330px;;
+    min-height: 330px;
     background: #fff;
     border-radius: 10px;
     padding: 0 36px;

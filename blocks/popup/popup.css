@@ -1,0 +1,18 @@
+.popup {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .popup {
+        padding: 0 19px;
+    }
+}

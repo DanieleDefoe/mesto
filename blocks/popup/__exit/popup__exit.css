@@ -1,0 +1,27 @@
+.popup__exit {
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 102%;
+    top: -12%;
+    background: url(../../../images/exit.svg);
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+}
+
+.popup__exit:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+    .popup__exit {
+        width: 20px;
+        height: 20px;
+        left: 95%;
+        transform: translateX(-50%);
+        top: -10%;
+    }
+}

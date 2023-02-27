@@ -3,8 +3,12 @@
     background: none;
     margin: 0;
     padding: 0;
+    width: 22px;
+    height: 19px;
+    transition: all .2s ease-in-out;
 }
 
 .card__button:hover {
     cursor: pointer;
+    opacity: .5;
 }

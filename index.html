@@ -9,76 +9,63 @@
         <title>mesto</title>
         <link rel="shortcut icon" href="./images/icon.svg" type="image/x-icon">
         <link rel="stylesheet" href="./pages/index.css">
-        <script src="./scripts/index.js" defer></script>
     </head>
     <body class="page">
         <div class="wrapper">
-            <div class="popup">
-                <form action="" class="popup__container" method="post">
-                    <button class="popup__exit" type="button"></button>
-                    <legend class="popup__title">Редактировать профиль</legend>
-                    <fieldset class="popup__inputs">
-                        <input type="text" class="popup__input" name="title" id="title" placeholder="Введите ваше имя" required>
-                        <input type="text" class="popup__input" name="description" id="description" placeholder="Введите ваш статус" required>
-                    </fieldset>
-                    <button type="submit" class="popup__submit">Сохранить</button>
-                </form>
-            </div>
             <header class="header">
                 <img src="./images/logo.svg" alt="Логотип Место Россия" loading="lazy" class="header__logo">
-                <hr class="header__line">
             </header>
             <main class="main">
                 <section class="profile">
                     <div class="profile__main">
                         <img src="./images/avatar.jpg" alt="Аватар" class="profile__avatar" loading="lazy">
                         <h1 class="profile__name">Жак-Ив Кусто</h1>
-                        <button class="profile__edit" type="button"></button>
+                        <button class="profile__edit" type="button" aria-label="Редактировать"></button>
                         <p class="profile__description">Исследователь океана</p>
                     </div>
-                    <button class="profile__add" type="button"></button>
+                    <button class="profile__add" type="button" aria-label="добавить"></button>
                 </section>
                 <section class="elements">
                     <article class="card">
                         <img src="./images/grid-1.jpg" alt="Древний замок в лесистой местности" loading="lazy" class="card__image">
                         <div class="card__info">
                             <h2 class="card__title">Карачаевск</h2>
-                            <button type="button" class="card__button"></button>
+                            <button type="button" class="card__button" aria-label="лайк"></button>
                         </div>
                     </article>
                     <article class="card">
                         <img src="./images/grid-2.jpg" alt="На заднем плане горы Небо светло-оранжевое" loading="lazy" class="card__image">
                         <div class="card__info">
                             <h2 class="card__title">Гора Эльбрус</h2>
-                            <button type="button" class="card__button"></button>
+                            <button type="button" class="card__button" aria-label="лайк"></button>
                         </div>
                     </article>
                     <article class="card">
                         <img src="./images/grid-3.jpg" alt="Лес на заднем плане высокая Гора с белой макушкой в тумане" loading="lazy" class="card__image">
                         <div class="card__info">
                             <h2 class="card__title">Домбай</h2>
-                            <button type="button" class="card__button"></button>
+                            <button type="button" class="card__button" aria-label="лайк"></button>
                         </div>
                     </article>
                     <article class="card">
                         <img src="./images/grid-2.jpg" alt="На заднем плане горы Небо светло-оранжевое" loading="lazy" class="card__image">
                         <div class="card__info">
                             <h2 class="card__title">Гора Эльбрус</h2>
-                            <button type="button" class="card__button"></button>
+                            <button type="button" class="card__button" aria-label="лайк"></button>
                         </div>
                     </article>
                     <article class="card">
                         <img src="./images/grid-3.jpg" alt="Лес на заднем плане высокая Гора с белой макушкой в тумане" loading="lazy" class="card__image">
                         <div class="card__info">
                             <h2 class="card__title">Домбай</h2>
-                            <button type="button" class="card__button"></button>
+                            <button type="button" class="card__button" aria-label="лайк"></button>
                         </div>
                     </article>
                     <article class="card">
                         <img src="./images/grid-1.jpg" alt="Древний замок в лесистой местности" loading="lazy" class="card__image">
                         <div class="card__info">
                             <h2 class="card__title">Карачаевск</h2>
-                            <button type="button" class="card__button"></button>
+                            <button type="button" class="card__button" aria-label="лайк"></button>
                         </div>
                     </article>
                 </section>
@@ -86,6 +73,18 @@
             <footer class="footer">
                 <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
             </footer>
+            <div class="popup">
+                <form class="popup__container">
+                    <button class="popup__exit" type="button" aria-label="закрыть"></button>
+                    <h3 class="popup__title">Редактировать профиль</h3>
+                    <fieldset class="popup__inputs">
+                        <input type="text" class="popup__input" name="title" id="title">
+                        <input type="text" class="popup__input" name="description" id="description">
+                    </fieldset>
+                    <button type="submit" class="popup__submit">Сохранить</button>
+                </form>
+            </div>
         </div>
+        <script src="./scripts/index.js" defer></script>
     </body>
 </html>

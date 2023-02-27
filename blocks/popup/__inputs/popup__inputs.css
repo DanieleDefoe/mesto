@@ -5,4 +5,11 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin-bottom: 48px;
+}
+
+@media only screen and (max-width: 767px) {
+    .popup__inputs {
+        margin-bottom: 45px;
+    }
 }

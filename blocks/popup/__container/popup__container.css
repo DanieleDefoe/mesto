@@ -1,10 +1,8 @@
 .popup__container {
-    width: calc(282px + (430 - 282) * ((100vw - 320px) / (1280 - 320)));
-    max-width: 430px;
-    min-height: 330px;
+    width: 430px;
     background: #fff;
     border-radius: 10px;
-    padding: 0 36px;
+    padding: 34px 36px 37px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -14,4 +12,11 @@
     transform: translate(-50%, -50%);
     margin: 0;
     box-sizing: border-box;
+}
+
+@media only screen and (max-width: 767px) {
+    .popup__container {
+        width: 282px;
+        padding: 25px 22px;
+    }
 }

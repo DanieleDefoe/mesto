@@ -11,6 +11,6 @@
 @media only screen and (max-width: 767px) {
     .profile__avatar {
         justify-self: center;
-        margin: 0;
+        margin: 0 0 22px 0;
     }
 }

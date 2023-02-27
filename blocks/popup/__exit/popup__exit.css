@@ -9,9 +9,11 @@
     width: 32px;
     height: 32px;
     background-size: contain;
+    transition: opacity .2s ease-in-out;
 }
 
 .popup__exit:hover {
+    opacity: .6;
     cursor: pointer;
 }
 

@@ -23,6 +23,7 @@ const hidePopup = () => {
 
 const fillColor = (e) => {
     e.target.classList.toggle('card__button_active');
+    e.target.blur();
 };
 
 const updateText = (e) => {

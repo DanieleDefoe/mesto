@@ -16,9 +16,11 @@
     transition: opacity .2s ease-out;
 }
 
-.profile__edit:hover {
-    cursor: pointer;
-    opacity: .6;
+@media (hover: hover) {
+    .profile__edit:hover {
+        cursor: pointer;
+        opacity: .6;
+    }
 }
 
 @media only screen and (max-width: 767px) {

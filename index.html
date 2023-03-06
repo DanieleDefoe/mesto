@@ -31,8 +31,8 @@
             <footer class="footer">
                 <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
             </footer>
-            <div class="popup">
-                <form class="popup__container popup__container_hidden" id="popup__edit-form">
+            <div class="popup profile-popup">
+                <form class="popup__container" id="popup__edit-form">
                     <button class="popup__exit" type="button" aria-label="закрыть"></button>
                     <h3 class="popup__title">Редактировать профиль</h3>
                     <fieldset class="popup__inputs">
@@ -41,7 +41,9 @@
                     </fieldset>
                     <button type="submit" class="popup__submit" id="popup__edit-submit">Сохранить</button>
                 </form>
-                <form class="popup__container popup__container_hidden" id="popup__add-form">
+            </div>
+            <div class="popup card-popup">
+                <form class="popup__container" id="popup__add-form">
                     <button class="popup__exit" type="button" aria-label="закрыть"></button>
                     <h3 class="popup__title">Новое место</h3>
                     <fieldset class="popup__inputs">
@@ -50,7 +52,9 @@
                     </fieldset>
                     <button type="submit" class="popup__submit" id="popup__add-submit">Создать</button>
                 </form>
-                <figure class="popup__image-container popup__image-container_hidden">
+            </div>
+            <div class="popup image-popup">
+                <figure class="popup__image-container">
                     <img src="./images/Vector.svg" alt="Попап картинка" class="popup__image">
                     <figcaption class="popup__image-title"></figcaption>
                     <button class="popup__exit popup__exit_place_image-container" type="button" aria-label="закрыть"></button>

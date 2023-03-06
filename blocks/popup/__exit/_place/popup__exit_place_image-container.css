@@ -1,0 +1,11 @@
+.popup__exit_place_image-container {
+    left: calc(100% + 8px);
+    top: -8px;
+    transform: translateY(-100%);
+}
+
+@media only screen and (max-width: 500px) {
+    .popup__exit_place_image-container {
+        left: calc(100% - 20px);
+    }
+}

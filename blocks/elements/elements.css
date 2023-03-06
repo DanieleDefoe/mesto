@@ -4,8 +4,9 @@
     box-sizing: border-box;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+    grid-template-columns: repeat(auto-fit, 282px);
     gap: 20px 17px;
+    place-content: center;
 }
 
 @media only screen and (max-width: 900px) {

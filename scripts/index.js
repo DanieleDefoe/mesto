@@ -1,8 +1,8 @@
 const profilePopup = document.querySelector('.profile-popup');
-const editForm = profilePopup.querySelector('#popup__edit-form');
+const editForm = document.forms['edit-form'];
 
 const cardPopup = document.querySelector('.card-popup');
-const addForm = cardPopup.querySelector('#popup__add-form');
+const addForm = document.forms['add-form'];
 
 const imagePopup = document.querySelector('.image-popup');
 const popupImage = document.querySelector('.popup__image')
@@ -14,7 +14,7 @@ const profileStatus = document.querySelector('.profile__description');
 const editBtn = document.querySelector('.profile__edit');
 const addBtn = document.querySelector('.profile__add');
 
-const exitBtn = document.querySelectorAll('.popup__exit');
+const exitBtns = document.querySelectorAll('.popup__exit');
 
 const nameField = document.getElementById('title');
 const statusField = document.getElementById('description');
@@ -22,36 +22,39 @@ const statusField = document.getElementById('description');
 const placeTitle = document.getElementById('place-title');
 const placePhoto = document.getElementById('place-photo');
 
-const showPopup = (e) => {
+const openPopup = (popup) => {
+    popup.classList.add('popup_opened');
+};
+
+const showProfilePopup = (e) => {
+    e.target.blur();
+    openPopup(profilePopup);
+    nameField.value = profileName.textContent;
+    statusField.value = profileStatus.textContent;
+};
+
+const showAddPopup = (e) => {
+    e.target.blur();
+    openPopup(cardPopup);
+};
+
+const showImagePopup = (e) => {
     const target = e.target;
-    target.blur();
-    const classN = target.className;
-    if (classN === 'profile__edit') {
-        profilePopup.classList.add('popup_opened');
-        nameField.value = profileName.textContent;
-        statusField.value = profileStatus.textContent;
-    } else if (classN === 'profile__add') {
-        cardPopup.classList.add('popup_opened');
-    } else if (classN === 'card__image') {
-        imagePopup.classList.add('popup_opened');
-        popupImage.src = target.src;
-        popupImageCaption.textContent = target.nextElementSibling.nextElementSibling.firstElementChild.textContent;
-    }
+    openPopup(imagePopup);
+    popupImage.src = target.src;
+    popupImageCaption.textContent = target.closest('.card').querySelector('.card__title').textContent;
+    popupImage.alt = popupImageCaption.textContent;
 };
 
-const hidePopup = (e) => {
-    // if it is exit button
-    if (e) {
-        const exitButton = e.target;
-        const currentPopup = exitButton.parentElement.parentElement;
-        currentPopup.classList.remove('popup_opened');
+const closePopup = (e) => {
+    if (e.target) {
+        e.target.closest('.popup').classList.remove('popup_opened');
     } else {
-    // if it is submit button
-        document.querySelector('.popup_opened').classList.remove('popup_opened');
+        e.classList.remove('popup_opened');
     }
 };
 
-const fillColor = (e) => {
+const toggleColor = (e) => {
     e.target.classList.toggle('card__button_active');
     e.target.blur();
 };
@@ -88,11 +91,11 @@ const initialCards = [
 
 // CARD TEMPLATE GENETATOR
 
-const updateText = (e) => {
+const handleProfileFormSubmit = (e) => {
     e.preventDefault();
     profileName.textContent = nameField.value;
     profileStatus.textContent = statusField.value;
-    hidePopup();
+    closePopup(profilePopup);
 };
 
 const removeBtn = document.querySelectorAll('.card__remove');
@@ -102,36 +105,38 @@ const removeCard = (e) => {
     cardToRemove.remove();
 }
 
-const updateCard = (e) => {
+const handleCardFormSubmit = (e) => {
     e.preventDefault();
     const obj = {name: placeTitle.value, link: placePhoto.value};
-    appendCard(obj);
-    placeTitle.value = '';
-    placePhoto.value = '';
-    hidePopup();
+    prependCard(obj);
+    e.target.reset();
+    closePopup(cardPopup);
 }
 
-const appendCard = (card) => {
+const createCard = (card) => {
     const article = cardTemplate.cloneNode(true);
     const cardImage = article.querySelector('.card__image')
     cardImage.src = card.link;
-    cardImage.addEventListener('click', showPopup);
+    cardImage.alt = card.name;
+    cardImage.addEventListener('click', showImagePopup);
     article.querySelector('.card__title').textContent = card.name;
-    article.querySelector('.card__button').addEventListener('click', fillColor);
+    article.querySelector('.card__button').addEventListener('click', toggleColor);
     const removeBtn = article.querySelector('.card__remove');
-    removeBtn.src = "./images/remove.svg";
     removeBtn.addEventListener('click', removeCard);
+    return article;
+};
+
+const prependCard = (card) => {
+    const article = createCard(card);
     articleSection.prepend(article);
 };
 
-initialCards.forEach(appendCard);
+initialCards.forEach(prependCard);
 
-editBtn.addEventListener('click', showPopup);
-addBtn.addEventListener('click', showPopup);
+editBtn.addEventListener('click', showProfilePopup);
+addBtn.addEventListener('click', showAddPopup);
 
-exitBtn.forEach(exit => exit.addEventListener('click', hidePopup));
+exitBtns.forEach(exit => exit.addEventListener('click', closePopup));
 
-editForm.addEventListener('submit', updateText);
-addForm.addEventListener('submit', updateCard);
-
-removeBtn.forEach(btn => btn.addEventListener('click', removeCard));
+editForm.addEventListener('submit', handleProfileFormSubmit);
+addForm.addEventListener('submit', handleCardFormSubmit);

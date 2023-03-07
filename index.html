@@ -16,7 +16,7 @@
                 <img src="./images/logo.svg" alt="Логотип Место Россия" loading="lazy" class="header__logo">
             </header>
             <main class="main">
-                <section class="profile">
+                <section class="profile" aria-label="данные профиля">
                     <div class="profile__main">
                         <img src="./images/avatar.jpg" alt="Аватар" class="profile__avatar" loading="lazy">
                         <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -25,14 +25,14 @@
                     </div>
                     <button class="profile__add" type="button" aria-label="добавить"></button>
                 </section>
-                <section class="elements">
+                <section class="elements" aria-label="карточки с местами">
                 </section>
             </main>
             <footer class="footer">
                 <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
             </footer>
             <div class="popup profile-popup">
-                <form class="popup__container" id="popup__edit-form">
+                <form class="popup__container" id="popup__edit-form" name="edit-form">
                     <button class="popup__exit" type="button" aria-label="закрыть"></button>
                     <h3 class="popup__title">Редактировать профиль</h3>
                     <fieldset class="popup__inputs">
@@ -43,7 +43,7 @@
                 </form>
             </div>
             <div class="popup card-popup">
-                <form class="popup__container" id="popup__add-form">
+                <form class="popup__container" id="popup__add-form" name="add-form">
                     <button class="popup__exit" type="button" aria-label="закрыть"></button>
                     <h3 class="popup__title">Новое место</h3>
                     <fieldset class="popup__inputs">
@@ -54,17 +54,17 @@
                 </form>
             </div>
             <div class="popup image-popup">
-                <figure class="popup__image-container">
+                <div class="popup__image-container">
                     <img src="./images/Vector.svg" alt="Попап картинка" class="popup__image">
-                    <figcaption class="popup__image-title"></figcaption>
+                    <p class="popup__image-title"></p>
                     <button class="popup__exit popup__exit_place_image-container" type="button" aria-label="закрыть"></button>
-                </figure>
+                </div>
             </div>
         </div>
         <template class="card-template">
             <article class="card">
                 <img src="./images/Vector.svg" alt="Карточка" loading="lazy" class="card__image">
-                <img src="./images/Vector.svg" alt="Удалить карточку" loading="lazy" class="card__remove">
+                <img src="./images/remove.svg" alt="Удалить карточку" loading="lazy" class="card__remove">
                 <div class="card__info">
                     <h2 class="card__title"></h2>
                     <button type="button" class="card__button" aria-label="лайк"></button>

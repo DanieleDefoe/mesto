@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: center;
     transition: opacity .2s ease-out;
+    margin-bottom: 8px;
 }
 
 @media (hover: hover) {

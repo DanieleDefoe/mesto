@@ -7,7 +7,7 @@ const cardPopup = document.querySelector('.card-popup');
 const addForm = document.forms['add-form'];
 
 const imagePopup = document.querySelector('.image-popup');
-const popupImage = document.querySelector('.popup__image')
+const popupImage = document.querySelector('.popup__image');
 const popupImageCaption = document.querySelector('.popup__image-title');
 
 const profileName = document.querySelector('.profile__name');
@@ -106,7 +106,7 @@ const removeBtn = document.querySelectorAll('.card__remove');
 const removeCard = (e) => {
     const cardToRemove = e.target.closest('.card');
     cardToRemove.remove();
-}
+};
 
 const handleCardFormSubmit = (e) => {
     e.preventDefault();
@@ -114,23 +114,23 @@ const handleCardFormSubmit = (e) => {
     prependCard(obj);
     e.target.reset();
     closePopup();
-}
+};
 
-const createCard = (card) => {
+const createCard = (name, link) => {
     const article = cardTemplate.cloneNode(true);
-    const cardImage = article.querySelector('.card__image')
-    cardImage.src = card.link;
-    cardImage.alt = card.name;
+    const cardImage = article.querySelector('.card__image');
+    cardImage.src = link;
+    cardImage.alt = name;
     cardImage.addEventListener('click', showImagePopup);
-    article.querySelector('.card__title').textContent = card.name;
+    article.querySelector('.card__title').textContent = name;
     article.querySelector('.card__button').addEventListener('click', toggleColor);
     const removeBtn = article.querySelector('.card__remove');
     removeBtn.addEventListener('click', removeCard);
     return article;
 };
 
-const prependCard = (card) => {
-    const article = createCard(card);
+const prependCard = ({ name, link }) => {
+    const article = createCard(name, link);
     articleSection.prepend(article);
 };
 

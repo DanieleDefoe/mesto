@@ -1,3 +1,5 @@
+const popups = document.querySelectorAll('.popup');
+
 const profilePopup = document.querySelector('.profile-popup');
 const editForm = document.forms['edit-form'];
 
@@ -40,10 +42,15 @@ const showAddPopup = (e) => {
 
 const showImagePopup = (e) => {
     const target = e.target;
-    openPopup(imagePopup);
     popupImage.src = target.src;
     popupImageCaption.textContent = target.closest('.card').querySelector('.card__title').textContent;
     popupImage.alt = popupImageCaption.textContent;
+    openPopup(imagePopup);
+};
+
+const closePopupByClickingOnOverlay = (e) => {
+    if (e.target !== e.currentTarget) return;
+    closePopup();
 };
 
 const closePopup = () => {
@@ -136,3 +143,5 @@ exitBtns.forEach(exit => exit.addEventListener('click', closePopup));
 
 editForm.addEventListener('submit', handleProfileFormSubmit);
 addForm.addEventListener('submit', handleCardFormSubmit);
+
+popups.forEach(popup => popup.addEventListener('click', closePopupByClickingOnOverlay));

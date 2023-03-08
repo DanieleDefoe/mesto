@@ -46,12 +46,8 @@ const showImagePopup = (e) => {
     popupImage.alt = popupImageCaption.textContent;
 };
 
-const closePopup = (e) => {
-    if (e.target) {
-        e.target.closest('.popup').classList.remove('popup_opened');
-    } else {
-        e.classList.remove('popup_opened');
-    }
+const closePopup = () => {
+    document.querySelector('.popup_opened').classList.remove('popup_opened');
 };
 
 const toggleColor = (e) => {
@@ -95,7 +91,7 @@ const handleProfileFormSubmit = (e) => {
     e.preventDefault();
     profileName.textContent = nameField.value;
     profileStatus.textContent = statusField.value;
-    closePopup(profilePopup);
+    closePopup();
 };
 
 const removeBtn = document.querySelectorAll('.card__remove');
@@ -110,7 +106,7 @@ const handleCardFormSubmit = (e) => {
     const obj = {name: placeTitle.value, link: placePhoto.value};
     prependCard(obj);
     e.target.reset();
-    closePopup(cardPopup);
+    closePopup();
 }
 
 const createCard = (card) => {

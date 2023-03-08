@@ -31,36 +31,36 @@
             <footer class="footer">
                 <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
             </footer>
-            <div class="popup profile-popup">
-                <form class="popup__container" id="popup__edit-form" name="edit-form">
-                    <button class="popup__exit" type="button" aria-label="закрыть"></button>
-                    <h3 class="popup__title">Редактировать профиль</h3>
-                    <fieldset class="popup__inputs">
-                        <input type="text" class="popup__input" name="title" id="title" placeholder="Имя" required>
-                        <input type="text" class="popup__input" name="description" id="description" placeholder="Статус" required>
-                    </fieldset>
-                    <button type="submit" class="popup__submit" id="popup__edit-submit">Сохранить</button>
-                </form>
-            </div>
-            <div class="popup card-popup">
-                <form class="popup__container" id="popup__add-form" name="add-form">
-                    <button class="popup__exit" type="button" aria-label="закрыть"></button>
-                    <h3 class="popup__title">Новое место</h3>
-                    <fieldset class="popup__inputs">
-                        <input type="text" class="popup__input" name="place-title" id="place-title" placeholder="Название" required>
-                        <input type="text" class="popup__input" name="place-description" id="place-photo" placeholder="Ссылка на картинку" required>
-                    </fieldset>
-                    <button type="submit" class="popup__submit" id="popup__add-submit">Создать</button>
-                </form>
-            </div>
-            <div class="popup image-popup">
-                <div class="popup__image-container">
-                    <img src="./images/Vector.svg" alt="Попап картинка" class="popup__image">
-                    <p class="popup__image-title"></p>
-                    <button class="popup__exit popup__exit_place_image-container" type="button" aria-label="закрыть"></button>
-                </div>
-            </div>
         </div>
+        <section class="popup profile-popup">
+            <form class="popup__container" id="popup__edit-form" name="edit-form">
+                <button class="popup__exit" type="button" aria-label="закрыть"></button>
+                <h3 class="popup__title">Редактировать профиль</h3>
+                <fieldset class="popup__inputs">
+                    <input type="text" class="popup__input" name="title" id="title" placeholder="Имя" required>
+                    <input type="text" class="popup__input" name="description" id="description" placeholder="Статус" required>
+                </fieldset>
+                <button type="submit" class="popup__submit" id="popup__edit-submit">Сохранить</button>
+            </form>
+        </section>
+        <section class="popup card-popup">
+            <form class="popup__container" id="popup__add-form" name="add-form">
+                <button class="popup__exit" type="button" aria-label="закрыть"></button>
+                <h3 class="popup__title">Новое место</h3>
+                <fieldset class="popup__inputs">
+                    <input type="text" class="popup__input" name="place-title" id="place-title" placeholder="Название" required>
+                    <input type="text" class="popup__input" name="place-description" id="place-photo" placeholder="Ссылка на картинку" required>
+                </fieldset>
+                <button type="submit" class="popup__submit" id="popup__add-submit">Создать</button>
+            </form>
+        </section>
+        <section class="popup image-popup">
+            <article class="popup__image-container">
+                <img src="./images/Vector.svg" alt="Попап картинка" class="popup__image">
+                <p class="popup__image-title"></p>
+                <button class="popup__exit popup__exit_place_image-container" type="button" aria-label="закрыть"></button>
+            </article>
+        </section>
         <template class="card-template">
             <article class="card">
                 <img src="./images/Vector.svg" alt="Карточка" class="card__image">

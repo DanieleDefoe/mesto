@@ -1,8 +1,9 @@
 .card__remove {
+    padding: 0;
     width: 19px;
     height: 19px;
-    object-fit: contain;
-    object-position: center;
+    background: url(../../../images/remove.svg) no-repeat center / contain padding-box transparent;
+    border: none;
     position: absolute;
     top: 20px;
     right: 20px;

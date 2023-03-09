@@ -1,16 +1,16 @@
 .header {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    width: 100%;
-    padding-bottom: 41px;
-    padding-top: 45px;
-    border-bottom: 1px solid #54545470;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 41px;
+  padding-top: 45px;
+  border-bottom: 1px solid #54545470;
 }
 
 @media only screen and (max-width: 767px) {
-    .header {
-        padding-bottom: 32px;
-        padding-top: 28px;
-    }
+  .header {
+    padding-bottom: 32px;
+    padding-top: 28px;
+  }
 }

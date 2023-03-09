@@ -1,11 +1,11 @@
 .card__image {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 10px 10px 0 0;
-    height: 282px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px 10px 0 0;
+  height: 282px;
 }
 
 .card__image:hover {
-    cursor: pointer;
+  cursor: pointer;
 }

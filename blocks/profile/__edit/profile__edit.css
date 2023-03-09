@@ -1,35 +1,35 @@
 .profile__edit {
-    padding: 0;
-    background: url(../../../images/edit.svg) no-repeat;
-    background-size: 10px 10px;
-    background-position: center;
-    border: 1px solid #fff;
-    grid-area: edit;
-    width: 24px;
-    height: 24px;
-    align-self: flex-end;
-    justify-self: center;
-    margin-left: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity .2s ease-out;
-    margin-bottom: 8px;
+  padding: 0;
+  background: url(../../../images/edit.svg) no-repeat;
+  background-size: 10px 10px;
+  background-position: center;
+  border: 1px solid #fff;
+  grid-area: edit;
+  width: 24px;
+  height: 24px;
+  align-self: flex-end;
+  justify-self: center;
+  margin-left: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease-out;
+  margin-bottom: 8px;
 }
 
 @media (hover: hover) {
-    .profile__edit:hover {
-        cursor: pointer;
-        opacity: .6;
-    }
+  .profile__edit:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .profile__edit {
-        align-self: center;
-        margin-left: 10px;
-        width: 18px;
-        height: 18px;
-        background-size: 7.5px 7.5px;
-    }
+  .profile__edit {
+    align-self: center;
+    margin-left: 10px;
+    width: 18px;
+    height: 18px;
+    background-size: 7.5px 7.5px;
+  }
 }

@@ -2,3 +2,7 @@ package.json
 package-lock.json
 .eslintrc.json
 node_modules
+.husky
+.prettierignore
+.prettierrc.json
+.vscode

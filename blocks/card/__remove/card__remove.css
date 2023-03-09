@@ -1,16 +1,17 @@
 .card__remove {
-    padding: 0;
-    width: 19px;
-    height: 19px;
-    background: url(../../../images/remove.svg) no-repeat center / contain padding-box transparent;
-    border: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    transition: all .2s ease-in-out;
+  padding: 0;
+  width: 19px;
+  height: 19px;
+  background: url(../../../images/remove.svg) no-repeat center / contain
+    padding-box transparent;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: all 0.2s ease-in-out;
 }
 
 .card__remove:hover {
-    cursor: pointer;
-    opacity: .6;
+  cursor: pointer;
+  opacity: 0.6;
 }

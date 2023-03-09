@@ -1,19 +1,19 @@
 .popup__image-container {
-    position: fixed;
-    left: 50%;
-    top: 50vh;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 0;
-    width: 75vw;
-    height: 75vh;
-    max-width: 816px;
-    max-height: 540px;
+  position: fixed;
+  left: 50%;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  width: 75vw;
+  height: 75vh;
+  max-width: 816px;
+  max-height: 540px;
 }
 
 @media only screen and (max-width: 500px) {
-    .popup__image-container {
-        max-width: 240px;
-        max-height: 300px;
-    }
+  .popup__image-container {
+    max-width: 240px;
+    max-height: 300px;
+  }
 }

@@ -136,9 +136,11 @@ initialCards.forEach(prependCard)
 editBtn.addEventListener('click', showProfilePopup)
 addBtn.addEventListener('click', showAddPopup)
 
-exitBtns.forEach(exit => exit.addEventListener('click', closePopup))
+exitBtns.forEach((exit) => exit.addEventListener('click', closePopup))
 
 editForm.addEventListener('submit', handleProfileFormSubmit)
 addForm.addEventListener('submit', handleCardFormSubmit)
 
-popups.forEach(popup => popup.addEventListener('click', closePopupByClickingOnOverlay))
+popups.forEach((popup) =>
+  popup.addEventListener('click', closePopupByClickingOnOverlay)
+)

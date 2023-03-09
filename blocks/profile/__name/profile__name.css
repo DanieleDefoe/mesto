@@ -1,19 +1,19 @@
 .profile__name {
-    margin: 0;
-    padding: 0;
-    grid-area: title;
-    color: #fff;
-    align-self: flex-end;
-    font-size: 42px;
-    font-weight: 500;
-    line-height: 48px;
+  margin: 0;
+  padding: 0;
+  grid-area: title;
+  color: #fff;
+  align-self: flex-end;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 48px;
 }
 
 @media only screen and (max-width: 767px) {
-    .profile__name {
-        align-self: unset;
-        margin: 0 0 14px 0;
-        font-size: 27px;
-        line-height: 33px;
-    }
+  .profile__name {
+    align-self: unset;
+    margin: 0 0 14px 0;
+    font-size: 27px;
+    line-height: 33px;
+  }
 }

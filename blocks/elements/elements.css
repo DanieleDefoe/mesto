@@ -1,22 +1,22 @@
 .elements {
-    margin: 0;
-    padding-top: 51px;
-    box-sizing: border-box;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 282px);
-    gap: 20px 17px;
-    place-content: center;
+  margin: 0;
+  padding-top: 51px;
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 282px);
+  gap: 20px 17px;
+  place-content: center;
 }
 
 @media only screen and (max-width: 900px) {
-    .elements {
-        width: calc(100% - 38px);
-    }
+  .elements {
+    width: calc(100% - 38px);
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .elements {
-        padding-top: 36px;
-    }
+  .elements {
+    padding-top: 36px;
+  }
 }

@@ -1,12 +1,12 @@
 .card {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background: #fff;
-    height: 365px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #fff;
+  height: 365px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }

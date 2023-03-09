@@ -1,22 +1,22 @@
 .popup__container {
-    width: 430px;
-    background: #fff;
-    border-radius: 10px;
-    padding: 34px 36px 37px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: fixed;
-    left: 50%;
-    top: 50vh;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    box-sizing: border-box;
+  width: 430px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 34px 36px 37px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: fixed;
+  left: 50%;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 767px) {
-    .popup__container {
-        width: 282px;
-        padding: 25px 22px;
-    }
+  .popup__container {
+    width: 282px;
+    padding: 25px 22px;
+  }
 }

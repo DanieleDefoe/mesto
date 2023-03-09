@@ -30,9 +30,9 @@ const openPopup = (popup) => {
 
 const showProfilePopup = (e) => {
     e.target.blur();
-    openPopup(profilePopup);
     nameField.value = profileName.textContent;
     statusField.value = profileStatus.textContent;
+    openPopup(profilePopup);
 };
 
 const showAddPopup = (e) => {
@@ -100,8 +100,6 @@ const handleProfileFormSubmit = (e) => {
     profileStatus.textContent = statusField.value;
     closePopup();
 };
-
-const removeBtn = document.querySelectorAll('.card__remove');
 
 const removeCard = (e) => {
     const cardToRemove = e.target.closest('.card');

@@ -40,11 +40,10 @@ const showAddPopup = (e) => {
     openPopup(cardPopup);
 };
 
-const showImagePopup = (e) => {
-    const target = e.target;
-    popupImage.src = target.src;
-    popupImageCaption.textContent = target.closest('.card').querySelector('.card__title').textContent;
-    popupImage.alt = popupImageCaption.textContent;
+const showImagePopup = (name, link) => {
+    popupImage.src = link;
+    popupImageCaption.textContent = name;
+    popupImage.alt = name;
     openPopup(imagePopup);
 };
 
@@ -119,7 +118,7 @@ const createCard = (name, link) => {
     const cardImage = article.querySelector('.card__image');
     cardImage.src = link;
     cardImage.alt = name;
-    cardImage.addEventListener('click', showImagePopup);
+    cardImage.addEventListener('click', () => showImagePopup(name, link));
     article.querySelector('.card__title').textContent = name;
     article.querySelector('.card__button').addEventListener('click', toggleColor);
     const removeBtn = article.querySelector('.card__remove');
